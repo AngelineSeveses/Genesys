@@ -1,7 +1,20 @@
 import React from 'react'
 
-export const App = () => {
+import './App.css';
+import { StickyNavbar } from './components/StickyNavbar';
+import Hero from './components/Hero';
+import Imageslider from './components/Imageslider';
+
+const App = () => {
   return (
-    <div>App</div>
+    <div>
+     <StickyNavbar></StickyNavbar>
+     <Hero></Hero>
+     <Imageslider></Imageslider>
+    <Imageslider></Imageslider>
+    
+    </div>
   )
 }
+
+export default App
