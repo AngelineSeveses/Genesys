@@ -7,8 +7,8 @@ export default withMT({
       colors: {
         customDark: '#292929',
         customGray: '#141414',
-        customBorder: '#3E3E3E',
-        bodyText: '#7B7B7B',
+        customBorder: '#3e3e3e',
+        bodyText: '#7b7b7b',
         customBlack: '#000000',
       },
       fontFamily: {
