@@ -19,22 +19,38 @@ export function StickyNavbar() {
 
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <Typography as="li" variant="small" className="p-1 font-normal text-gray-500">
+      <Typography
+        as="li"
+        variant="small"
+        className="p-1 font-normal text-gray-500"
+      >
         <a href="#" className="flex items-center">
           Home
         </a>
       </Typography>
-      <Typography as="li" variant="small" className="p-1 font-normal text-gray-500">
+      <Typography
+        as="li"
+        variant="small"
+        className="p-1 font-normal text-gray-500"
+      >
         <a href="#" className="flex items-center">
           Use Cases
         </a>
       </Typography>
-      <Typography as="li" variant="small" className="p-1 font-normal text-gray-500">
+      <Typography
+        as="li"
+        variant="small"
+        className="p-1 font-normal text-gray-500"
+      >
         <a href="#" className="flex items-center">
           Workflow
         </a>
       </Typography>
-      <Typography as="li" variant="small" className="p-1 font-normal text-gray-500">
+      <Typography
+        as="li"
+        variant="small"
+        className="p-1 font-normal text-gray-500"
+      >
         <a href="#" className="flex items-center">
           Revenue Streams
         </a>
@@ -43,11 +59,18 @@ export function StickyNavbar() {
   );
 
   return (
-    <div className="max-w-screen-lg mx-auto px-2" style={{ maxWidth: '1200px' }}>
+    <div
+      className="max-w-screen-lg mx-auto px-2"
+      style={{ maxWidth: "1200px" }}
+    >
       <Navbar className="sticky top-0 z-40 h-max max-w-full rounded-none bg-black px-4 py-3 text-gray-100 border-none dark:bg-gray-800 dark:text-gray-100 lg:px-8 lg:py-6">
         <div className="flex items-center justify-between">
           <a href="#" className="mr-4 cursor-pointer">
-            <img src="/images/logo.svg" alt="Logo" className="h-[30px] w-auto" />
+            <img
+              src="/images/logo.svg"
+              alt="Logo"
+              className="h-[30px] w-auto"
+            />
           </a>
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
@@ -98,8 +121,8 @@ export function StickyNavbar() {
       </Navbar>
 
       {/* Mobile Collapse Menu */}
-      <Collapse 
-        open={openNav} 
+      <Collapse
+        open={openNav}
         className="lg:hidden fixed top-0 left-0 w-full bg-black z-20 mt-16"
       >
         <div className="flex flex-col items-start justify-center px-4 py-4">

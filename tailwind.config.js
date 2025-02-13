@@ -6,25 +6,21 @@ export default withMT({
     extend: {
       colors: {
         customDark: '#292929',
+        customGray: '#141414',
+        customBorder: '#3E3E3E',
+        bodyText: '#7B7B7B',
         customBlack: '#000000',
       },
       fontFamily: {
         achivo: ['Achivo', 'serif'],
       },
-      animation: {
-        scroll: 'scroll 50s linear infinite', // Adjusted the speed for smoothness
+     animation: {
+        scroll: 'scroll 40s linear infinite',
       },
       keyframes: {
         scroll: {
-          '0%': {
-            transform: 'translateX(0)', // Start at position 0
-          },
-          '50%': {
-            transform: 'translateX(-50%)', // Move halfway
-          },
-          '100%': {
-            transform: 'translateX(-100%)', // Move fully to the left
-          },
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" }, // Moves fully left to loop seamlessly
         },
       },
     },

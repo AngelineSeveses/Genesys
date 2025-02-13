@@ -1,20 +1,27 @@
-import React from 'react'
+import React from "react";
+import "./App.css";
+import { StickyNavbar } from "./components/StickyNavbar";
+import Hero from "./components/Hero";
+import Imageslider from "./components/Imageslider";
+import Features from "./pages/Features";
+import Clients from "./pages/Clients";
+import Works from "./pages/Works";
+import Workflow from "./pages/Workflow";
 
-import './App.css';
-import { StickyNavbar } from './components/StickyNavbar';
-import Hero from './components/Hero';
-import Imageslider from './components/Imageslider';
 
 const App = () => {
   return (
     <div>
-     <StickyNavbar></StickyNavbar>
-     <Hero></Hero>
-     <Imageslider></Imageslider>
-    <Imageslider></Imageslider>
-    
+      <StickyNavbar />
+      <Hero />
+      <Imageslider />
+      <Imageslider />
+      <Features />
+      <Clients/>
+      <Works/>
+      <Workflow/>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
