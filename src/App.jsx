@@ -7,6 +7,7 @@ import Features from "./pages/Features";
 import Clients from "./pages/Clients";
 import Works from "./pages/Works";
 import Workflow from "./pages/Workflow";
+import Footer from "./pages/Footer";
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
       <Clients/>
       <Works/>
       <Workflow/>
+      <Footer/>
     </div>
   );
 };

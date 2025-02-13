@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Typography } from "@material-tailwind/react";
+import Linearcard from "../components/Linearcard";
 
 const Workflow = () => {
   return (
@@ -27,6 +28,8 @@ const Workflow = () => {
           <source src="/images/Genesysvid.mp4" type="video/mp4" />
         </video>
       </div>
+
+      <Linearcard/>
     </div>
   );
 };
