@@ -14,7 +14,7 @@ const Hero = () => {
       <Typography variant="h1" className="text-center font-normal">
         AI Characters Come to Life.
       </Typography>
-      <Typography variant="lead">
+      <Typography variant="lead" className="text-center font-normal">
         With Genesys, the future isn’t just imagined—it’s built.
       </Typography>
       <Button className="mt-4 bg-white text-black rounded-full shadow-none normal-case font-normal text-base flex items-center justify-center">

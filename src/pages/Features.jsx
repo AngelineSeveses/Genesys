@@ -20,7 +20,7 @@ const Features = () => {
      
            <Typography
              variant="paragraph"
-             className="text-base sm:text-base md:text-sm lg:text-lg xl:text-lg"
+             className="text-center font-normal text-base sm:text-base md:text-sm lg:text-lg xl:text-lg"
            >
              Capable of generating engaging content across text, image, voice, and
              video formats.

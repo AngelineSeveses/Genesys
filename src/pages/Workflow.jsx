@@ -22,7 +22,7 @@ const Workflow = () => {
         Completion
       </Typography>
 
-      <div className="mt-8 w-full max-w-4xl">
+      <div className="mt-8 w-full max-w-4xl px-6 md:px-0">
         <video className="w-full rounded-lg" controls autoPlay muted loop>
           <source src="/images/Genesys.webm" type="video/webm" />
           <source src="/images/Genesysvid.mp4" type="video/mp4" />

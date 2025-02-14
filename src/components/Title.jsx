@@ -13,14 +13,12 @@ const Title = () => {
        >
          AI <span className="italic text-pink-500">Generation System</span> that
          creates and manages fully
-         <span className="w-full block">
            customizable and multi-modal AI characters.
-         </span>
        </Typography>
  
        <Typography
          variant="paragraph"
-         className="text-base sm:text-base md:text-lg lg:text-xl xl:text-xl"
+         className="text-center font-normal text-base sm:text-base md:text-lg lg:text-xl xl:text-xl" 
        >
          Capable of generating engaging content across text, image, voice, and
          video formats.
