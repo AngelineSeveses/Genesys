@@ -34,7 +34,7 @@ const Edge = () => {
           <Card
             key={index}
             shadow={false}
-            className="relative group grid h-[27rem] w-full max-w-[20rem] items-end justify-center overflow-hidden text-left"
+            className="relative group grid h-[27rem] w-full max-w-[20rem] items-end justify-center overflow-hidden text-left bg-transparent"
           >
             {/* Background Image with Zoom Effect */}
             <CardHeader
@@ -47,11 +47,11 @@ const Edge = () => {
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110"
                 style={{ backgroundImage: `url(${card.imageUrl})` }}
               />
-              <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/50" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50" />
             </CardHeader>
 
             {/* Card Content (Text) */}
-            <CardBody className="relative py-10 px-4 md:px-8 text-left flex flex-col justify-between h-full">
+            <CardBody className="relative py-10 px-4 md:px-8 text-left flex flex-col justify-between h-full bg-transparent">
               <Typography
                 variant="h5"
                 color="white"
@@ -59,7 +59,7 @@ const Edge = () => {
               >
                 {card.title}
               </Typography>
-              <Typography className="text-gray-500 text-left">
+              <Typography className="text-gray-300 text-left">
                 {card.description}
               </Typography>
             </CardBody>
