@@ -19,7 +19,7 @@ const cardData = [
   }
 ];
 
-const Edge = () => {
+const Multi = () => {
   return (
     <div className="bg-customGray flex flex-col items-center justify-center pt-[100px] pb-[100px]">
       <Typography
@@ -29,12 +29,12 @@ const Edge = () => {
         Multi-Agent Types
       </Typography>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
         {cardData.map((card, index) => (
           <Card
             key={index}
             shadow={false}
-            className="relative group grid h-[27rem] w-full max-w-[20rem] items-end justify-center overflow-hidden text-left bg-transparent"
+            className="relative group grid h-[24rem] w-72 items-end justify-center overflow-hidden text-left bg-transparent"
           >
             {/* Background Image with Zoom Effect */}
             <CardHeader
@@ -70,4 +70,4 @@ const Edge = () => {
   );
 };
 
-export default Edge;
+export default Multi;

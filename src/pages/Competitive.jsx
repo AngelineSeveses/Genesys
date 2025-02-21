@@ -5,7 +5,7 @@ import { Typography, Card, CardBody } from "@material-tailwind/react";
 const StepCard = ({ title, description }) => {
   return (
     <Card className="bg-customGray w-96 shadow-lg border border-customBorder">
-      <CardBody className="flex flex-col h-full">
+      <CardBody className="flex flex-col h-full"> 
         {/* Modify the title to have the number part bigger */}
         <Typography variant="h5" color="white" className="mb-6 font-normal">
           <span className="text-3xl">{title.split(" ")[0]}</span>{" "}
@@ -17,7 +17,7 @@ const StepCard = ({ title, description }) => {
   );
 };
 
-const Works = () => {
+const Competitive = () => {
   const steps = [
     {
       title: "01 Create Agent",
@@ -37,17 +37,11 @@ const Works = () => {
 
   return (
     <div className="flex flex-col items-center justify-center max-w-screen-lg mx-auto px-6 space-y-12 py-[100px]">
-      {/* Section Title */}
       <Typography
         variant="h3"
-        className="text-center font-normal text-lg sm:text-xl md:text-2xl lg:text-3xl"
+        className="text-center font-normal text-lg sm:text-xl md:text-xl lg:text-2xl"
       >
-        How it works
-      </Typography>
-
-      {/* Section Subtitle */}
-       <Typography variant="paragraph" className="text-center text-base sm:text-base md:text-sm lg:text-lg xl:text-lg mt-2">
-        A Step-by-Step Guide to Our Process for Seamless Collaboration and Exceptional Results.
+        Multi-Agent Types
       </Typography>
 
       {/* Step Cards */}
@@ -62,4 +56,4 @@ const Works = () => {
   );
 };
 
-export default Works;
+export default Competitive;

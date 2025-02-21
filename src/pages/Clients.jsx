@@ -37,7 +37,7 @@ const Clients = () => {
       </Typography>
 
       {/* Button */}
-      <Button className="mt-6 bg-white text-black rounded-full shadow-none normal-case font-normal text-base flex items-center justify-center px-6 py-2">
+      <Button className="mt-6 bg-white text-black rounded-full shadow-none normal-case font-light text-base flex items-center justify-center px-6 py-2">
         See our clients
         <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="ml-2">
           <path

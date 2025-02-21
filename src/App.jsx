@@ -8,8 +8,8 @@ import Clients from "./pages/Clients";
 import Works from "./pages/Works";
 import Workflow from "./pages/Workflow";
 import Footer from "./pages/Footer";
-import Multichar from "./pages/Multichar";
-import Edge from "./pages/Edge";
+import Multi from "./pages/Multi";
+import Competitive from "./pages/Competitive";
 
 
 const App = () => {
@@ -23,8 +23,8 @@ const App = () => {
       <Clients/>
       <Works/>
       <Workflow/>
-      <Edge/>
-      <Multichar/>
+      <Multi/>
+      <Competitive/>
       <Footer/>
     </div>
   );

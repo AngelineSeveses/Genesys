@@ -25,7 +25,7 @@ const StepCard = ({ title, description }) => {
 const Linearcard = () => {
   const steps = [
     {
-      title: "01 Create Character",
+      title: "01 Create Agent",
       description:
         "Basic identity details (name, gender, birthday, location, etc.).",
     },
@@ -52,7 +52,7 @@ const Linearcard = () => {
     {
       title: "06 Mission Definition",
       description:
-        "Customizable objectives and operational guidelines for character behavior.",
+        "Customizable objectives and operational guidelines for agent behavior.",
     },
   ];
 

@@ -17,7 +17,7 @@ const Hero = () => {
       <Typography variant="body2" className="text-center font-normal">
         With Genesys, the future isn’t just imagined—it’s built.
       </Typography>
-      <Button className="mt-4 bg-white text-black rounded-full shadow-none normal-case font-normal text-base flex items-center justify-center">
+      <Button className="mt-4 bg-white text-black rounded-full shadow-none normal-case font-light text-base flex items-center justify-center">
         Create a Agent
         <svg
           width="24"
