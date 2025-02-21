@@ -14,7 +14,7 @@ const Features = () => {
              AI <span className="italic text-pink-500">Generation System</span> that
              creates and manages fully
              <span className="w-full block">
-               customizable and multi-modal AI characters.
+               customizable and multi-modal AI agents.
              </span>
            </Typography>
      

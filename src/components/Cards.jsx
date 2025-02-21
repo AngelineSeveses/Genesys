@@ -41,7 +41,7 @@ const Cards = () => {
       imageSrc: "/images/v1.gif",
     },
     {
-      title: "Employment",
+      title: "Hybrid",
       description: "AI agents that perform tasks with greater speed, efficiency, and cost-effectiveness compared to traditional human resources.",
       imageSrc: "/images/v3.gif", 
     },

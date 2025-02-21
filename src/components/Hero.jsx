@@ -11,14 +11,14 @@ const Hero = () => {
       <a href="#" className="mr-4 cursor-pointer">
         <img src="/images/image.svg" alt="Logo" className="h-[50px] w-auto" />
       </a>
-      <Typography variant="h1" className="text-center font-normal">
-        AI Characters Come to Life.
+      <Typography variant="h1" className="text-center font-medium">
+        AI Agents Come to Life.
       </Typography>
-      <Typography variant="lead" className="text-center font-normal">
+      <Typography variant="body2" className="text-center font-normal">
         With Genesys, the future isn’t just imagined—it’s built.
       </Typography>
       <Button className="mt-4 bg-white text-black rounded-full shadow-none normal-case font-normal text-base flex items-center justify-center">
-        Create a Character
+        Create a Agent
         <svg
           width="24"
           height="25"
