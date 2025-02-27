@@ -10,6 +10,7 @@ import Workflow from "./pages/Workflow";
 import Footer from "./pages/Footer";
 import Multi from "./pages/Multi";
 import Competitive from "./pages/Competitive";
+import Streams from "./Streams";
 
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
       <Workflow/>
       <Multi/>
       <Competitive/>
+      <Streams/>
       <Footer/>
     </div>
   );

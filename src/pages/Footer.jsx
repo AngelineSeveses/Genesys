@@ -69,6 +69,14 @@ const Footer = () => {
           <Typography variant="small" className="text-gray-400 text-sm text-center md:text-left">
             © {currentYear} <a href="https://material-tailwind.com/" className="hover:text-white">PopAI Agency</a>. All Rights Reserved.
           </Typography>
+          <div className="flex flex-col md:flex-row md:ml-auto md:space-x-4">
+            <Typography variant="small" className="text-gray-400 text-sm text-right">
+            Terms & Conditions
+            </Typography>
+            <Typography variant="small" className="text-gray-400 text-sm text-right">
+            Privacy Policy
+            </Typography>
+          </div>
         </div>
       </div>
     </footer>
