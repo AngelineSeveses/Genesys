@@ -1,37 +1,61 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Typography, Card, CardBody } from "@material-tailwind/react";
 
 // Reusable Step Card Component
-const StepCard = ({ title, description }) => {
+const StepCard = ({ title, description, setHeight }) => {
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    if (cardRef.current) {
+      setHeight((prev) => Math.max(prev, cardRef.current.clientHeight));
+    }
+  }, []);
+
   return (
-    <Card className="bg-customGray w-96 shadow-lg border border-customBorder">
-      <CardBody className="flex flex-col h-full"> 
-        {/* Modify the title to have the number part bigger */}
-        <Typography variant="h5" color="white" className="mb-6 font-normal">
-          <span className="text-3xl">{title.split(" ")[0]}</span>{" "}
-          {title.split(" ").slice(1).join(" ")}
+    <Card ref={cardRef} className="bg-customGray w-96 shadow-lg border border-customBorder h-full flex flex-col">
+      <CardBody className="flex flex-col flex-grow">
+        <Typography variant="h5" color="white" className="font-normal">
+          {title}
         </Typography>
-        <Typography className="text-gray-500 mt-6">{description}</Typography>
+        <div className="flex-grow"></div> {/* Pushes description to the bottom */}
+        <Typography className="text-gray-500">{description}</Typography>
       </CardBody>
     </Card>
   );
 };
 
 const Competitive = () => {
+  const [maxHeight, setMaxHeight] = useState(0);
+
   const steps = [
     {
-      title: "01 Create Agent",
+      title: "Multi-Modality",
       description:
-        "Personality, Appearance, Voice, Content, Instructions. Set the Objection/Mission of the agent",
+        "Seamlessly integrates text, voice, image, and video capabilities",
     },
     {
-      title: "02 Deploy the Agent",
+      title: "Customization Depth",
       description:
-        "Dedicated sales team to secure demos and build relationships with potential clients.",
+        "Unique blend of personality, appearance, and voice options.",
     },
     {
-      title: "03 Monitor & Optimize",
+      title: "Use Case Diversity",
       description: "From companionship to advanced marketing applications.",
+    },
+    {
+      title: "AI/Real/Hybrid Models",
+      description:
+        "Blend of fully AI, semi-AI, and real-person clones for broader appeal.",
+    },
+    {
+      title: "Seamless Cross-Platform",
+      description:
+        "The AI characters can be easily embedded into a wide range of platforms using API, providing unified experience across multiple channels",
+    },
+    {
+      title: "Ethical and Transparent",
+      description:
+        "From companionship to advanced marketing a The system integrates built-in safeguards for ethical use, ensures compliance with regulations and builds trust with users and businesses",
     },
   ];
 
@@ -47,8 +71,12 @@ const Competitive = () => {
       {/* Step Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-6 mt-6">
         {steps.map((step, index) => (
-          <div key={index} className="flex justify-center">
-            <StepCard title={step.title} description={step.description} />
+          <div
+            key={index}
+            className="flex justify-center"
+            style={{ height: maxHeight ? `${maxHeight}px` : "auto" }} // Set uniform height
+          >
+            <StepCard title={step.title} description={step.description} setHeight={setMaxHeight} />
           </div>
         ))}
       </div>
