@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, memo } from "react";
 
 const ImageSlider = () => {
   const sliderTrackRef1 = useRef(null);
@@ -26,7 +26,7 @@ const ImageSlider = () => {
             className="slider-track flex animate-leftToRight"
           >
             {[...Array(3)].map((_, index) => (
-              <ImageGroup key={index} />
+              <MemoizedImageGroup key={index} />
             ))}
           </div>
         </div>
@@ -40,7 +40,7 @@ const ImageSlider = () => {
             className="slider-track flex animate-rightToLeft"
           >
             {[...Array(3)].map((_, index) => (
-              <ImageGroup key={index} />
+              <MemoizedImageGroup key={index} />
             ))}
           </div>
         </div>
@@ -54,7 +54,7 @@ const ImageSlider = () => {
             className="slider-track flex animate-leftToRight"
           >
             {[...Array(3)].map((_, index) => (
-              <ImageGroup key={index} />
+              <MemoizedImageGroup key={index} />
             ))}
           </div>
         </div>
@@ -96,13 +96,12 @@ const ImageSlider = () => {
           width: max-content;
           will-change: transform;
         }
-
-       
       `}</style>
     </div>
   );
 };
 
+// Lazy-loaded Image Component
 const ImageGroup = () => (
   <div className="image-group flex">
     {[1, 2, 3, 4, 5].map((num) => (
@@ -111,10 +110,14 @@ const ImageGroup = () => (
           src={`/images/slider${num}.svg`}
           alt={`Logo ${num}`}
           className="h-[70px] w-auto block"
+          loading="lazy" // Lazy loading applied here ✅
         />
       </div>
     ))}
   </div>
 );
+
+// Memoize the component to avoid unnecessary re-renders
+const MemoizedImageGroup = memo(ImageGroup);
 
 export default ImageSlider;
