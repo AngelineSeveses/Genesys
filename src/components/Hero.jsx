@@ -5,7 +5,7 @@ import { Button, Typography } from "@material-tailwind/react";
 const Hero = () => {
   return (
     <div
-      className="flex flex-col items-center justify-center max-w-screen-lg mx-auto px-2 space-y-6 m-[100px]"
+    id="home" className="flex flex-col items-center justify-center max-w-screen-lg mx-auto px-2 space-y-6 m-[100px]"
       style={{ maxWidth: "1200px" }}
     >
       <a href="#" className="mr-4 cursor-pointer">

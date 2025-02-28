@@ -6,7 +6,7 @@ const ImageSlider = () => {
   const sliderTrackRef3 = useRef(null);
 
   useEffect(() => {
-    const SPEED_FACTOR = 10;
+    const SPEED_FACTOR = 12;
     const imageCount = 5;
 
     [sliderTrackRef1, sliderTrackRef2, sliderTrackRef3].forEach((ref) => {

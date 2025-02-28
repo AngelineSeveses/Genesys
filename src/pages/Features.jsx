@@ -4,7 +4,7 @@ import Cards from '../components/Cards';
 const Features = () => {
   return (
      <div
-           className="flex flex-col items-center justify-center max-w-screen-lg mx-auto px-2 space-y-6 m-[100px]"
+          id="usecases" className="flex flex-col items-center justify-center max-w-screen-lg mx-auto px-2 space-y-6 m-[100px]"
            style={{ maxWidth: "1200px" }}
          >
            <Typography
