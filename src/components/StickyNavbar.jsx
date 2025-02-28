@@ -23,7 +23,7 @@ export function StickyNavbar() {
 
   return (
     <div className="sticky top-0 z-50 w-full" style={{ backgroundColor: "#000000" }}>
-      <Navbar className="max-w-full rounded-none px-4 py-3 text-gray-100 border-none lg:px-8 lg:py-6" style={{ backgroundColor: "#000000" }}>
+      <Navbar className="max-w-full rounded-none px-4 py-3 text-gray-100 border-none lg:px-4 lg:py-4" style={{ backgroundColor: "#000000" }}>
         <div className="max-w-screen-lg mx-auto flex items-center justify-between">
           {/* Logo */}
           <ScrollLink to="home" smooth={true} duration={500} offset={-80} className="mr-4 cursor-pointer">
