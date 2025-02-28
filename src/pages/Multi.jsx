@@ -22,49 +22,54 @@ const cardData = [
 const Multi = () => {
   return (
     <div className="bg-customGray flex flex-col items-center justify-center pt-[100px] pb-[100px]">
-      <Typography
-        variant="h3"
-        className="text-center font-normal text-lg sm:text-xl md:text-xl lg:text-2xl"
-      >
-        Multi-Agent Types
-      </Typography>
+      <div className="max-w-7xl mx-auto px-6 md:px-24">
+        {/* Title */}
+        <Typography
+          variant="h3"
+          className="text-center font-normal text-lg sm:text-xl md:text-xl lg:text-2xl"
+        >
+          Multi-Agent Types
+        </Typography>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-        {cardData.map((card, index) => (
-          <Card
-            key={index}
-            shadow={false}
-            className="relative group grid h-[24rem] w-72 items-end justify-center overflow-hidden text-left bg-transparent"
-          >
-            {/* Background Image with Zoom Effect */}
-            <CardHeader
-              floated={false}
-              shadow={false}
-              color="transparent"
-              className="absolute inset-0 m-0 h-full w-full rounded-none overflow-hidden"
-            >
-              <div 
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110"
-                style={{ backgroundImage: `url(${card.imageUrl})` }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50" />
-            </CardHeader>
-
-            {/* Card Content (Text) */}
-            <CardBody className="relative py-10 px-4 md:px-8 text-left flex flex-col justify-between h-full bg-transparent">
-              <Typography
-                variant="h5"
-                color="white"
-                className="font-normal text-left"
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+          {cardData.map((card, index) => (
+            <div key={index} className="flex justify-center">
+              <Card
+                shadow={false}
+                className="relative group grid h-[24rem] w-full sm:w-[90%] md:w-72 items-end justify-center overflow-hidden text-left bg-transparent"
               >
-                {card.title}
-              </Typography>
-              <Typography className="text-gray-300 text-left">
-                {card.description}
-              </Typography>
-            </CardBody>
-          </Card>
-        ))}
+                {/* Background Image with Zoom Effect */}
+                <CardHeader
+                  floated={false}
+                  shadow={false}
+                  color="transparent"
+                  className="absolute inset-0 m-0 h-full w-full rounded-none overflow-hidden"
+                >
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110"
+                    style={{ backgroundImage: `url(${card.imageUrl})` }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50" />
+                </CardHeader>
+
+                {/* Card Content (Text) */}
+                <CardBody className="relative py-10 px-4 md:px-8 text-left flex flex-col justify-between h-full bg-transparent">
+                  <Typography
+                    variant="h5"
+                    color="white"
+                    className="font-normal text-left"
+                  >
+                    {card.title}
+                  </Typography>
+                  <Typography className="text-gray-300 text-left">
+                    {card.description}
+                  </Typography>
+                </CardBody>
+              </Card>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

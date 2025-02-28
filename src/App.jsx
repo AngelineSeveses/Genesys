@@ -13,12 +13,12 @@ import Competitive from "./pages/Competitive";
 import Streams from "./Streams";
 
 
+
 const App = () => {
   return (
     <div>
       <StickyNavbar />
       <Hero />
-      <Imageslider />
       <Imageslider />
       <Features />
       <Clients/>

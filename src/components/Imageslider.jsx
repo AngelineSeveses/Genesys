@@ -1,49 +1,107 @@
-import React from 'react';
+import React, { useEffect, useRef } from "react";
 
-const Imageslider = () => {
+const ImageSlider = () => {
+  const sliderTrackRef1 = useRef(null);
+  const sliderTrackRef2 = useRef(null);
+  const sliderTrackRef3 = useRef(null);
+
+  useEffect(() => {
+    const SPEED_FACTOR = 10;
+    const imageCount = 5;
+
+    [sliderTrackRef1, sliderTrackRef2, sliderTrackRef3].forEach((ref) => {
+      if (ref.current) {
+        ref.current.style.animationDuration = `${imageCount * SPEED_FACTOR}s`;
+      }
+    });
+  }, []);
+
   return (
-    <div className="bg-black pt-8 overflow-hidden">
+    <div className="bg-black pt-8 overflow-hidden space-y-4">
       <div className="w-full px-6 lg:px-8">
-        <div className="relative flex overflow-hidden">
-          {/* Continuous scrolling container */}
-          <div className="flex min-w-full animate-scroll whitespace-nowrap">
-            {/* Logos repeated twice for smooth transition */}
-            <div className="flex shrink-0">
-              <img src="/images/slider1.svg" alt="Logo" className="h-[70px] w-auto px-3" />
-              <img src="/images/slider2.svg" alt="Logo" className="h-[70px] w-auto px-3" />
-              <img src="/images/slider3.svg" alt="Logo" className="h-[70px] w-auto px-3" />
-              <img src="/images/slider4.svg" alt="Logo" className="h-[70px] w-auto px-3" />
-              <img src="/images/slider5.svg" alt="Logo" className="h-[70px] w-auto px-3" />
-            </div>
-            <div className="flex shrink-0">
-              <img src="/images/slider1.svg" alt="Logo" className="h-[70px] w-auto px-3" />
-              <img src="/images/slider2.svg" alt="Logo" className="h-[70px] w-auto px-3" />
-              <img src="/images/slider3.svg" alt="Logo" className="h-[70px] w-auto px-3" />
-              <img src="/images/slider4.svg" alt="Logo" className="h-[70px] w-auto px-3" />
-              <img src="/images/slider5.svg" alt="Logo" className="h-[70px] w-auto px-3" />
-            </div>
+        {/* First Slider - Left to Right */}
+        <div className="slider-container relative overflow-hidden">
+          <div ref={sliderTrackRef1} className="slider-track flex animate-leftToRight">
+            {[...Array(3)].map((_, index) => (
+              <ImageGroup key={index} />
+            ))}
           </div>
         </div>
       </div>
 
-      {/* Animation */}
+      <div className="w-full px-6 lg:px-8">
+        {/* Second Slider - Right to Left */}
+        <div className="slider-container relative overflow-hidden">
+          <div ref={sliderTrackRef2} className="slider-track flex animate-rightToLeft">
+            {[...Array(3)].map((_, index) => (
+              <ImageGroup key={index} />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full px-6 lg:px-8">
+        {/* Third Slider - Left to Right Again */}
+        <div className="slider-container relative overflow-hidden">
+          <div ref={sliderTrackRef3} className="slider-track flex animate-leftToRight">
+            {[...Array(3)].map((_, index) => (
+              <ImageGroup key={index} />
+            ))}
+          </div>
+        </div>
+      </div>
+
       <style jsx>{`
-        @keyframes scroll {
-          from {
-            transform: translateX(0);
+        .slider-container {
+          width: 100%;
+          mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+          -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+        }
+
+        @keyframes leftToRight {
+          0% {
+            transform: translateX(-33.33%);
           }
-          to {
-            transform: translateX(-50%);
+          100% {
+            transform: translateX(0);
           }
         }
 
-        .animate-scroll {
-          display: flex;
-          animation: scroll 10s linear infinite;
+        @keyframes rightToLeft {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-33.33%);
+          }
         }
+
+        .animate-leftToRight {
+          animation: leftToRight 15s linear infinite;
+          width: max-content;
+          will-change: transform;
+        }
+
+        .animate-rightToLeft {
+          animation: rightToLeft 15s linear infinite;
+          width: max-content;
+          will-change: transform;
+        }
+
+       
       `}</style>
     </div>
   );
 };
 
-export default Imageslider;
+const ImageGroup = () => (
+  <div className="image-group flex">
+    {[1, 2, 3, 4, 5].map((num) => (
+      <div key={num} className="image-wrapper flex-shrink-0 mx-2">
+        <img src={`/images/slider${num}.svg`} alt={`Logo ${num}`} className="h-[70px] w-auto block" />
+      </div>
+    ))}
+  </div>
+);
+
+export default ImageSlider;

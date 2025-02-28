@@ -5,7 +5,7 @@ import { Button, Typography } from "@material-tailwind/react";
 const ClientLogo = ({ src, alt }) => {
   return (
     <img
-      className="col-span-2 max-h-24 w-auto object-contain lg:col-span-1"
+      className="max-h-24 w-auto object-contain"
       src={src}
       alt={alt}
       width="150"
@@ -49,9 +49,9 @@ const Clients = () => {
         </svg>
       </Button>
 
-      {/* Client Logos Grid */}
+      {/* Client Logos */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto mt-10 grid max-w-lg grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 items-center gap-x-8 gap-y-10">
+        <div className="mx-auto mt-10 flex flex-wrap justify-center gap-x-8 gap-y-10 sm:grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 overflow-x-auto whitespace-nowrap">
           {clientLogos.map((logo, index) => (
             <ClientLogo key={index} src={logo} alt={`Client logo ${index + 1}`} />
           ))}
