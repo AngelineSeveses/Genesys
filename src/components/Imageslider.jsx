@@ -51,7 +51,7 @@ const ImageSlider = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .slider-container {
           width: 100%;
           mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);

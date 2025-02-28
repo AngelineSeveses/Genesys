@@ -1,11 +1,11 @@
 import React from "react";
 import { Button, Typography } from "@material-tailwind/react";
 
-
 const Hero = () => {
   return (
     <div
-    id="home" className="flex flex-col items-center justify-center max-w-screen-lg mx-auto px-2 space-y-6 m-[100px]"
+      id="home"
+      className="flex flex-col items-center justify-center max-w-screen-lg mx-auto px-2 space-y-6 pt-[120px] pb-[100px]"
       style={{ maxWidth: "1200px" }}
     >
       <a href="#" className="mr-4 cursor-pointer">
@@ -14,18 +14,12 @@ const Hero = () => {
       <Typography variant="h1" className="text-center font-medium">
         AI Agents Come to Life.
       </Typography>
-      <Typography variant="body2" className="text-center font-normal">
+      <Typography variant="paragraph" className="text-center font-normal">
         With Genesys, the future isn’t just imagined—it’s built.
       </Typography>
       <Button className="mt-4 bg-white text-black rounded-full shadow-none normal-case font-light text-base flex items-center justify-center">
-        Create a Agent
-        <svg
-          width="24"
-          height="25"
-          viewBox="0 0 24 25"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        Create an Agent
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             fillRule="evenodd"
             clipRule="evenodd"
@@ -34,14 +28,7 @@ const Hero = () => {
           />
         </svg>
       </Button>
-
-
-
     </div>
-
-
-
-   
   );
 };
 

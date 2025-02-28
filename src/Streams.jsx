@@ -3,6 +3,7 @@ import { Typography, Card, CardBody } from "@material-tailwind/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
+import "./styles.css";
 import { Pagination } from "swiper/modules";
 
 // Reusable Step Card Component
@@ -66,7 +67,7 @@ const Streams = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center pt-[100px] pb-[100px]">
+    <div id="streams" className="flex flex-col items-center justify-center pt-[120px] pb-[100px]">
       {/* Title */}
       <Typography
         variant="h3"
@@ -111,16 +112,7 @@ const Streams = () => {
         </Swiper>
       </div>
 
-      {/* Custom Pagination Styles */}
-      <style jsx global>{`
-        .swiper-pagination-bullet {
-          background: white !important;
-          opacity: 1 !important;
-        }
-        .swiper-pagination-bullet-active {
-          background: #B25FAB !important;
-        }
-      `}</style>
+     
     </div>
   );
 };

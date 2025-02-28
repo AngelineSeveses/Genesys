@@ -1,0 +1,10 @@
+/* styles.css */
+.swiper-pagination-bullet {
+    background: white !important;
+    opacity: 1 !important;
+  }
+  .swiper-pagination-bullet-active {
+    background: #B25FAB !important;
+  }
+  
+  
