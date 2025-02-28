@@ -1,5 +1,10 @@
 import React from "react";
-import { Card, CardHeader, CardBody, Typography } from "@material-tailwind/react";
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  Typography,
+} from "@material-tailwind/react";
 
 // Reusable Card Component
 const InfoCard = ({ title, description, imageSrc }) => {
@@ -37,25 +42,36 @@ const Cards = () => {
   const cardData = [
     {
       title: "Engagement & Promotion",
-      description: "AI-powered avatars for personalized engagement and activity generation.",
+      description:
+        "AI-powered avatars for personalized engagement and activity generation.",
       imageSrc: "/images/v2.gif",
     },
     {
       title: "Entertainment / Lifestyle",
-      description: "Digital companions for users seeking emotional connection or lifestyle improvement.",
+      description:
+        "Digital companions for users seeking emotional connection or lifestyle improvement.",
       imageSrc: "/images/v1.gif",
     },
     {
       title: "Hybrid",
-      description: "AI agents that perform tasks with greater speed, efficiency, and cost-effectiveness compared to traditional human resources.",
-      imageSrc: "/images/v3.gif", 
+      description:
+        "AI agents that perform tasks with greater speed, efficiency, and cost-effectiveness compared to traditional human resources.",
+      imageSrc: "/images/v3.gif",
     },
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center max-w-screen-lg mx-auto px-2 space-y-6 m-[100px]" style={{ maxWidth: "1200px" }}>
+    <div
+      className="flex flex-col items-center justify-center max-w-screen-lg mx-auto px-2 space-y-6 m-[100px]"
+      style={{ maxWidth: "1200px" }}
+    >
       {cardData.map((card, index) => (
-        <InfoCard key={index} title={card.title} description={card.description} imageSrc={card.imageSrc} />
+        <InfoCard
+          key={index}
+          title={card.title}
+          description={card.description}
+          imageSrc={card.imageSrc}
+        />
       ))}
     </div>
   );

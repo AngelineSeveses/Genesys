@@ -19,7 +19,13 @@ const Hero = () => {
       </Typography>
       <Button className="mt-4 bg-white text-black rounded-full shadow-none normal-case font-light text-base flex items-center justify-center">
         Create an Agent
-        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          width="24"
+          height="25"
+          viewBox="0 0 24 25"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <path
             fillRule="evenodd"
             clipRule="evenodd"

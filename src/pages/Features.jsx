@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 import { Button, Typography } from "@material-tailwind/react";
-import Cards from '../components/Cards';
+import Cards from "../components/Cards";
 
 const Features = () => {
   return (

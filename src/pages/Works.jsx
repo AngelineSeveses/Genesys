@@ -46,8 +46,12 @@ const Works = () => {
       </Typography>
 
       {/* Section Subtitle */}
-       <Typography variant="paragraph" className="text-center text-base sm:text-base md:text-sm lg:text-lg xl:text-lg mt-2">
-        A Step-by-Step Guide to Our Process for Seamless Collaboration and Exceptional Results.
+      <Typography
+        variant="paragraph"
+        className="text-center text-base sm:text-base md:text-sm lg:text-lg xl:text-lg mt-2"
+      >
+        A Step-by-Step Guide to Our Process for Seamless Collaboration and
+        Exceptional Results.
       </Typography>
 
       {/* Step Cards */}

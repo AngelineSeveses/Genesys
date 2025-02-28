@@ -12,8 +12,6 @@ import Multi from "./pages/Multi";
 import Competitive from "./pages/Competitive";
 import Streams from "./Streams";
 
-
-
 const App = () => {
   return (
     <div>
@@ -21,13 +19,13 @@ const App = () => {
       <Hero />
       <Imageslider />
       <Features />
-      <Clients/>
-      <Works/>
-      <Workflow/>
-      <Multi/>
-      <Competitive/>
-      <Streams/>
-      <Footer/>
+      <Clients />
+      <Works />
+      <Workflow />
+      <Multi />
+      <Competitive />
+      <Streams />
+      <Footer />
     </div>
   );
 };

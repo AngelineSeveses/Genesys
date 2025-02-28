@@ -21,7 +21,10 @@ const ImageSlider = () => {
       <div className="w-full px-6 lg:px-8">
         {/* First Slider - Left to Right */}
         <div className="slider-container relative overflow-hidden">
-          <div ref={sliderTrackRef1} className="slider-track flex animate-leftToRight">
+          <div
+            ref={sliderTrackRef1}
+            className="slider-track flex animate-leftToRight"
+          >
             {[...Array(3)].map((_, index) => (
               <ImageGroup key={index} />
             ))}
@@ -32,7 +35,10 @@ const ImageSlider = () => {
       <div className="w-full px-6 lg:px-8">
         {/* Second Slider - Right to Left */}
         <div className="slider-container relative overflow-hidden">
-          <div ref={sliderTrackRef2} className="slider-track flex animate-rightToLeft">
+          <div
+            ref={sliderTrackRef2}
+            className="slider-track flex animate-rightToLeft"
+          >
             {[...Array(3)].map((_, index) => (
               <ImageGroup key={index} />
             ))}
@@ -43,7 +49,10 @@ const ImageSlider = () => {
       <div className="w-full px-6 lg:px-8">
         {/* Third Slider - Left to Right Again */}
         <div className="slider-container relative overflow-hidden">
-          <div ref={sliderTrackRef3} className="slider-track flex animate-leftToRight">
+          <div
+            ref={sliderTrackRef3}
+            className="slider-track flex animate-leftToRight"
+          >
             {[...Array(3)].map((_, index) => (
               <ImageGroup key={index} />
             ))}
@@ -98,7 +107,11 @@ const ImageGroup = () => (
   <div className="image-group flex">
     {[1, 2, 3, 4, 5].map((num) => (
       <div key={num} className="image-wrapper flex-shrink-0 mx-2">
-        <img src={`/images/slider${num}.svg`} alt={`Logo ${num}`} className="h-[70px] w-auto block" />
+        <img
+          src={`/images/slider${num}.svg`}
+          alt={`Logo ${num}`}
+          className="h-[70px] w-auto block"
+        />
       </div>
     ))}
   </div>

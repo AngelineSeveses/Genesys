@@ -27,19 +27,32 @@ const Clients = () => {
   return (
     <div className="bg-customGray flex flex-col items-center justify-center pt-[100px] pb-[100px]">
       {/* Title */}
-      <Typography variant="h3" className="text-center font-normal text-lg sm:text-xl md:text-xl lg:text-2xl">
+      <Typography
+        variant="h3"
+        className="text-center font-normal text-lg sm:text-xl md:text-xl lg:text-2xl"
+      >
         Among our Clients
       </Typography>
 
       {/* Subtitle */}
-      <Typography variant="paragraph" className="text-center text-base sm:text-base md:text-sm lg:text-lg xl:text-lg mt-2">
+      <Typography
+        variant="paragraph"
+        className="text-center text-base sm:text-base md:text-sm lg:text-lg xl:text-lg mt-2"
+      >
         A categorized display of clients by industry or services
       </Typography>
 
       {/* Button */}
       <Button className="mt-6 bg-white text-black rounded-full shadow-none normal-case font-light text-base flex items-center justify-center px-6 py-2">
         See our clients
-        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="ml-2">
+        <svg
+          width="24"
+          height="25"
+          viewBox="0 0 24 25"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="ml-2"
+        >
           <path
             fillRule="evenodd"
             clipRule="evenodd"
@@ -53,7 +66,11 @@ const Clients = () => {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto mt-10 flex flex-wrap justify-center gap-x-8 gap-y-10 sm:grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 overflow-x-auto whitespace-nowrap">
           {clientLogos.map((logo, index) => (
-            <ClientLogo key={index} src={logo} alt={`Client logo ${index + 1}`} />
+            <ClientLogo
+              key={index}
+              src={logo}
+              alt={`Client logo ${index + 1}`}
+            />
           ))}
         </div>
       </div>

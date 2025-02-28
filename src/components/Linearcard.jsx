@@ -61,7 +61,11 @@ const Linearcard = () => {
       {/* Step Cards - Always 1 Card Per Row */}
       <div className="grid grid-cols-1 gap-6 w-full">
         {steps.map((step, index) => (
-          <StepCard key={index} title={step.title} description={step.description} />
+          <StepCard
+            key={index}
+            title={step.title}
+            description={step.description}
+          />
         ))}
       </div>
     </div>

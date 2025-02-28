@@ -4,7 +4,10 @@ import Linearcard from "../components/Linearcard";
 
 const Workflow = () => {
   return (
-    <div id="workflow" className="flex flex-col items-center justify-center pt-[100px] pb-[100px]">
+    <div
+      id="workflow"
+      className="flex flex-col items-center justify-center pt-[100px] pb-[100px]"
+    >
       {/* Title */}
       <Typography
         variant="h3"
@@ -29,7 +32,7 @@ const Workflow = () => {
         </video>
       </div>
 
-      <Linearcard/>
+      <Linearcard />
     </div>
   );
 };

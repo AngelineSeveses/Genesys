@@ -22,12 +22,28 @@ export function StickyNavbar() {
   ];
 
   return (
-    <div className="sticky top-0 z-50 w-full" style={{ backgroundColor: "#000000" }}>
-      <Navbar className="max-w-full rounded-none px-4 py-3 text-gray-100 border-none lg:px-4 lg:py-4" style={{ backgroundColor: "#000000" }}>
+    <div
+      className="sticky top-0 z-50 w-full"
+      style={{ backgroundColor: "#000000" }}
+    >
+      <Navbar
+        className="max-w-full rounded-none px-4 py-3 text-gray-100 border-none lg:px-4 lg:py-4"
+        style={{ backgroundColor: "#000000" }}
+      >
         <div className="max-w-screen-lg mx-auto flex items-center justify-between">
           {/* Logo */}
-          <ScrollLink to="home" smooth={true} duration={500} offset={-80} className="mr-4 cursor-pointer">
-            <img src="/images/logo.svg" alt="Logo" className="h-[30px] w-auto" />
+          <ScrollLink
+            to="home"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className="mr-4 cursor-pointer"
+          >
+            <img
+              src="/images/logo.svg"
+              alt="Logo"
+              className="h-[30px] w-auto"
+            />
           </ScrollLink>
 
           {/* Desktop Navigation */}
@@ -55,8 +71,18 @@ export function StickyNavbar() {
             className="ml-auto h-6 w-6 text-inherit hover:bg-transparent lg:hidden"
             onClick={() => setOpenNav(true)}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
           </IconButton>
         </div>
@@ -67,9 +93,24 @@ export function StickyNavbar() {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black">
           {/* Close Button (Fixed Top-Right) */}
           <div className="absolute top-5 right-5">
-            <IconButton variant="text" className="text-white" onClick={() => setOpenNav(false)}>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" className="h-8 w-8" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            <IconButton
+              variant="text"
+              className="text-white"
+              onClick={() => setOpenNav(false)}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                className="h-8 w-8"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </IconButton>
           </div>

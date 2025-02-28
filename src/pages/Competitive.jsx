@@ -12,12 +12,16 @@ const StepCard = ({ title, description, setHeight }) => {
   }, []);
 
   return (
-    <Card ref={cardRef} className="bg-customGray w-96 shadow-lg border border-customBorder h-full flex flex-col">
+    <Card
+      ref={cardRef}
+      className="bg-customGray w-96 shadow-lg border border-customBorder h-full flex flex-col"
+    >
       <CardBody className="flex flex-col flex-grow">
         <Typography variant="h5" color="white" className="font-normal">
           {title}
         </Typography>
-        <div className="flex-grow"></div> {/* Pushes description to the bottom */}
+        <div className="flex-grow"></div>{" "}
+        {/* Pushes description to the bottom */}
         <Typography className="text-gray-500">{description}</Typography>
       </CardBody>
     </Card>
@@ -76,7 +80,11 @@ const Competitive = () => {
             className="flex justify-center"
             style={{ height: maxHeight ? `${maxHeight}px` : "auto" }} // Set uniform height
           >
-            <StepCard title={step.title} description={step.description} setHeight={setMaxHeight} />
+            <StepCard
+              title={step.title}
+              description={step.description}
+              setHeight={setMaxHeight}
+            />
           </div>
         ))}
       </div>
