@@ -8,41 +8,60 @@ import { Pagination } from "swiper/modules";
 // Reusable Step Card Component
 const StepCard = ({ icon, title, description }) => {
   return (
-    <Card className="bg-customGray w-full shadow-lg border border-customBorder">
-      <CardBody className="flex flex-col h-full items-start text-left">
+    <Card className="bg-customGray w-full shadow-lg border border-customBorder h-full">
+      <CardBody className="flex flex-col h-full">
         {/* Title with Icon */}
         <div className="flex items-center">
-          <img src={icon} alt={title} className="w-8 h-8 mr-2" /> {/* Adjust size & spacing */}
+          <img src={icon} alt={title} className="w-8 h-8 mr-2" />
           <Typography variant="h5" color="white" className="font-normal">
             {title}
           </Typography>
         </div>
 
+        {/* Add Space Between Title and Description */}
+        <div className="mt-24"></div>
+
         {/* Description */}
-        <Typography className="text-gray-500 mt-6">{description}</Typography>
+        <Typography className="text-gray-500">{description}</Typography>
       </CardBody>
     </Card>
   );
 };
 
 const Streams = () => {
-  const steps = [
+  const stepsSlide1 = [
     {
       icon: "/images/card1.svg",
-      title: "Create Agent",
-      description:
-        "Personality, Appearance, Voice, Content, Instructions. Set the Objection/Mission of the agent",
+      title: "Subscription Plans",
+      description: "Tiered pricing for different levels of access (e.g., basic, premium).",
     },
     {
       icon: "/images/card2.svg",
-      title: "Deploy the Agent",
-      description:
-        "Dedicated sales team to secure demos and build relationships with potential clients.",
+      title: "Pay-per-Character",
+      description: "Charge per AI character created and deployed.",
     },
     {
       icon: "/images/card3.svg",
-      title: "Monitor & Optimize",
-      description: "From companionship to advanced marketing applications.",
+      title: "Content Payment",
+      description: "Charge per image/video, phone calls.",
+    },
+  ];
+
+  const stepsSlide2 = [
+    {
+      icon: "/images/money.svg",
+      title: "Token As A Service",
+      description: "AI agent that expertise in special domain",
+    },
+    {
+      icon: "/images/man.svg",
+      title: "Customization Services",
+      description: "Add-ons for advanced features like voice cloning or hyper-detailed avatars",
+    },
+    {
+      icon: "/images/check.svg",
+      title: "Enterprise Solutions",
+      description: "Licensing for large-scale use (e.g., e-commerce businesses, social platforms).",
     },
   ];
 
@@ -75,17 +94,17 @@ const Streams = () => {
           {/* Slide 1 */}
           <SwiperSlide>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-6 mb-8">
-              {steps.map((step, index) => (
+              {stepsSlide1.map((step, index) => (
                 <StepCard key={index} icon={step.icon} title={step.title} description={step.description} />
               ))}
             </div>
           </SwiperSlide>
 
-          {/* Slide 2 (Duplicated Cards) */}
+          {/* Slide 2 (Different Content) */}
           <SwiperSlide>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-6 mb-8">
-              {steps.map((step, index) => (
-                <StepCard key={`dup-${index}`} icon={step.icon} title={step.title} description={step.description} />
+              {stepsSlide2.map((step, index) => (
+                <StepCard key={`slide2-${index}`} icon={step.icon} title={step.title} description={step.description} />
               ))}
             </div>
           </SwiperSlide>
